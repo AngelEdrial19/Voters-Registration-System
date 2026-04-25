@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    background: #f8fafc; /* Mas hayag nga background para mo-pop ang cards */
+    color: #1e293b;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 260px; /* Mas dako gamay para naay "breathing room" */
+    background: #0f172a;
+    color: white;
+    height: 100vh;
+    padding: 30px 20px;
+    box-shadow: 4px 0 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+}
+
+.sidebar h2 {
+    font-size: 1.4rem;
+    padding-left: 15px;
+    margin-bottom: 35px;
+    background: linear-gradient(to right, #fff, #38bdf8);
+    
+    /* Idugang kining duha sa ubos */
+    background-clip: text; 
+    -webkit-background-clip: text;
+    
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.sidebar button {
+    width: 100%;
+    margin-bottom: 12px;      /* Mas dako nga spacing tali sa mga buttons */
+    padding: 14px 18px;       /* Mas bagas nga padding para dako ang click area */
+    background: transparent;
+    border: none;
+    color: #94a3b8;           /* Muted color sa sugod */
+    text-align: left;
+    cursor: pointer;
+    border-radius: 12px;      /* Mas lingin nga corners, modern tan-awon */
+    font-size: 1rem;          /* Sakto nga gidak-on sa text */
+    font-weight: 500;
+    display: flex;            /* Para dali ra butangan og icons puhon */
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Hamis nga transition */
+    letter-spacing: 0.5px;
+}
+
+.sidebar button:hover {
+    background: rgba(56, 189, 248, 0.1); /* Transparent blue background */
+    color: #38bdf8;                     /* Mo-light blue ang text */
+    padding-left: 25px;                 /* "Slide" effect inig hover */
+    box-shadow: inset 4px 0 0 #38bdf8;  /* Naay linya sa kilid inig hover */
+}
+
+/* Kani para sa active nga button (kung asa ka nga page) */
+.sidebar button.active {
+    background: #38bdf8;
+    color: #0f172a;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+}
+
+/* MAIN CONTENT */
+.main {
+    flex: 1;
+    padding: 40px;
+    max-width: 1200px;
+}
+
+.main h1 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* DASHBOARD CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 16px; /* Mas lingin para modern */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Mo-alsa gamay inig hover */
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #64748b;
+    letter-spacing: 0.05em;
+}
+
+.card p {
+    margin: 10px 0 0;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+/* FORM ENHANCEMENT */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+/* TABLE ENHANCEMENT */
+.table-container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 30px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #f8fafc;
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+    color: #475569;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+}
+
+tr:hover {
+    background: #f8fafc;
+}
+
+/* BUTTON ACTION */
+button.action {
+    padding: 8px 16px;
+    background: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+button.action:hover {
+    background: #dc2626;
+}
+
+.input-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+@media (max-width: 600px) {
+    .input-group, .form-card div {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+#register button {
+    background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+    color: #0f172a;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%; /* Puwede pud 'auto' kung gusto nimo dili lapad */
+    margin-top: 10px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(56, 189, 248, 0.2);
+    letter-spacing: 0.5px;
+    text-transform: uppercase; /* Para mas professional */
+}
+
+/* HOVER EFFECT */
+#register button:hover {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+    color: white;
+    transform: translateY(-3px); /* Mo-alsa gamay */
+    box-shadow: 0 10px 15px -3px rgba(14, 165, 233, 0.4); /* Mas dako nga shadow inig hover */
+}
+
+/* ACTIVE/CLICK EFFECT */
+#register button:active {
+    transform: translateY(-1px); /* Mo-naog gamay inig click */
+    box-shadow: 0 4px 6px -1px rgba(14, 165, 233, 0.2);
+}
+</style>
+
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h2>Voters System</h2>
+
+    <button onclick="showSection('dashboard')">Dashboard</button>
+    <button onclick="showSection('register')">Register Voter</button>
+    <button onclick="showSection('list')">List of Voters</button>
+    <button>Other</button>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+    <!-- DASHBOARD -->
+    <div id="dashboard">
+        <h2>Dashboard</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Total Voters</h3>
+                <p id="totalVoters">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Addresses</h3>
+                <p id="totalAddress">0</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- REGISTER -->
+   <div id="register" style="display:none;">
+    <h1>Register Voter</h1> <div class="form-card"> <div class="input-group">
+            <input id="firstname" placeholder="First Name">
+            <input id="lastname" placeholder="Last Name">
+        </div>
+
+        <input id="address" placeholder="Address">
+
+        <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 15px;">
+            <input id="age" type="number" placeholder="Age">
+            <input id="birthdate" type="date">
+        </div>
+
+        <select id="gender">
+            <option disabled selected>Select Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+
+        <select id="precinct">
+            <option disabled selected>Select Precinct</option>
+        </select>
+
+        <button class="save-btn" onclick="addVoter()">
+            Save Voter Information
+        </button>
+    </div>
+</div>
+
+    <!-- LIST -->
+    <div id="list" style="display:none;">
+        <h2>List of Voters</h2>
+
+        <input id="search" placeholder="Search..." onkeyup="searchVoter()">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Age</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+
+</div>
+
+<script>
+
+// SWITCH SECTIONS
+function showSection(id) {
+    document.getElementById("dashboard").style.display = "none";
+    document.getElementById("register").style.display = "none";
+    document.getElementById("list").style.display = "none";
+
+    document.getElementById(id).style.display = "block";
+
+    if (id === "dashboard") loadDashboard();
+    if (id === "list") loadVoters();
+}
+
+
+// LOAD DASHBOARD
+async function loadDashboard() {
+    const res = await fetch("http://127.0.0.1:3000/api/voters");
+    const data = await res.json();
+
+    document.getElementById("totalVoters").innerText = data.length;
+
+    const uniqueAddresses = [...new Set(data.map(v => v.address))];
+    document.getElementById("totalAddress").innerText = uniqueAddresses.length;
+}
+
+
+// LOAD PRECINCT
+async function loadPrecincts() {
+    const res = await fetch("http://127.0.0.1:3000/api/precincts");
+    const data = await res.json();
+
+    const select = document.getElementById("precinct");
+
+    data.forEach(p => {
+        const opt = document.createElement("option");
+        opt.value = p.precinct_id;
+        opt.text = p.precinct_no;
+        select.appendChild(opt);
+    });
+}
+
+
+// ADD VOTER
+async function addVoter() {
+    const voter = {
+        firstname: firstname.value,
+        lastname: lastname.value,
+        address: address.value,
+        age: age.value,
+        birthdate: birthdate.value,
+        gender: gender.value,
+        precinct_id: precinct.value
+    };
+
+    await fetch("http://127.0.0.1:3000/api/voters", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(voter)
+    });
+
+    alert("Saved!");
+
+    document.getElementById("firstname").value = "";
+    document.getElementById("lastname").value = "";
+    document.getElementById("address").value = "";
+    document.getElementById("age").value = "";
+    document.getElementById("birthdate").value = "";
+    document.getElementById("gender").selectedIndex = 0;
+    document.getElementById("precinct").selectedIndex = 0;
+}
+
+
+// LOAD VOTERS
+async function loadVoters() {
+    const res = await fetch("http://127.0.0.1:3000/api/voters");
+    const data = await res.json();
+
+    const table = document.getElementById("tableBody");
+    table.innerHTML = "";
+
+    data.forEach(v => {
+        table.innerHTML += `
+            <tr>
+                <td>${v.firstname} ${v.lastname}</td>
+                <td>${v.address}</td>
+                <td>${v.age}</td>
+                <td><button class="action" onclick="deleteVoter(${v.voter_id})">Delete</button></td>
+            </tr>
+        `;
+    });
+}
+
+
+// DELETE
+async function deleteVoter(id) {
+    await fetch(`http://127.0.0.1:3000/api/voters/${id}`, {
+        method: "DELETE"
+    });
+
+    loadVoters();
+}
+
+
+// SEARCH
+function searchVoter() {
+    const value = document.getElementById("search").value.toLowerCase();
+    const rows = document.querySelectorAll("#tableBody tr");
+
+    rows.forEach(row => {
+        row.style.display = row.innerText.toLowerCase().includes(value) ? "" : "none";
+    });
+}
+
+
+// INIT
+loadDashboard();
+loadPrecincts();
+
+</script>
+
+</body>
+</html>

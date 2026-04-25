@@ -1,0 +1,168 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Voters System API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Auth",
+      "description": "User Authentication"
+    },
+    {
+      "name": "Voters",
+      "description": "Voter Management"
+    }
+  ],
+  "paths": {
+    "/api/login": {
+      "post": {
+        "tags": ["Auth"],
+        "summary": "Login user",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": { "type": "string" },
+                  "password": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Login result"
+          }
+        }
+      }
+    },
+
+    "/api/register": {
+      "post": {
+        "tags": ["Auth"],
+        "summary": "Register user",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": { "type": "string" },
+                  "password": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "User created"
+          }
+        }
+      }
+    },
+
+    "/api/voters": {
+      "get": {
+        "tags": ["Voters"],
+        "summary": "Get all voters",
+        "responses": {
+          "200": {
+            "description": "List of voters"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Voters"],
+        "summary": "Add voter",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "firstname": { "type": "string" },
+                  "lastname": { "type": "string" },
+                  "address": { "type": "string" },
+                  "age": { "type": "integer" },
+                  "birthdate": { "type": "string" },
+                  "gender": { "type": "string" },
+                  "precinct_id": { "type": "integer" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Voter added"
+          }
+        }
+      }
+    },
+
+    "/api/voters/{id}": {
+      "put": {
+        "tags": ["Voters"],
+        "summary": "Update voter",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Updated"
+          }
+        }
+      },
+      "delete": {
+        "tags": ["Voters"],
+        "summary": "Delete voter",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Deleted"
+          }
+        }
+      }
+    },
+
+    "/api/precincts": {
+      "get": {
+        "tags": ["Voters"],
+        "summary": "Get precincts",
+        "responses": {
+          "200": {
+            "description": "List of precincts"
+          }
+        }
+      }
+    }
+  }
+}
