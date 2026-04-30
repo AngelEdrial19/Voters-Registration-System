@@ -241,7 +241,7 @@ button.action:hover {
     <button onclick="showSection('dashboard')">Dashboard</button>
     <button onclick="showSection('register')">Register Voter</button>
     <button onclick="showSection('list')">List of Voters</button>
-    <button>Other</button>
+    <button onclick="showSection('pending')">Pending Voters</button>
 </div>
 
 <!-- MAIN -->
@@ -313,6 +313,22 @@ button.action:hover {
         </table>
     </div>
 
+    <div id="pending" style="display:none;">
+    <h2>Pending Voters</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Age</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="pendingBody"></tbody>
+    </table>
+</div>
+
 </div>
 
 <script>
@@ -322,11 +338,13 @@ function showSection(id) {
     document.getElementById("dashboard").style.display = "none";
     document.getElementById("register").style.display = "none";
     document.getElementById("list").style.display = "none";
+    document.getElementById("pending").style.display = "none";
 
     document.getElementById(id).style.display = "block";
 
     if (id === "dashboard") loadDashboard();
     if (id === "list") loadVoters();
+    if (id === "pending") loadPending(); // 🔥 ADD THIS
 }
 
 
@@ -427,6 +445,52 @@ function searchVoter() {
     rows.forEach(row => {
         row.style.display = row.innerText.toLowerCase().includes(value) ? "" : "none";
     });
+}
+
+// LOAD PENDING
+async function loadPending() {
+    const res = await fetch("http://127.0.0.1:3000/api/voters/pending");
+    const data = await res.json();
+
+    const table = document.getElementById("pendingBody");
+    table.innerHTML = "";
+
+    data.forEach(v => {
+        table.innerHTML += `
+            <tr>
+                <td>${v.firstname} ${v.lastname}</td>
+                <td>${v.address}</td>
+                <td>${v.age}</td>
+                <td>
+                    <button style="background:green;color:white;padding:6px 12px;border:none;border-radius:5px;"
+                        onclick="approve(${v.voter_id})">Accept</button>
+
+                    <button style="background:red;color:white;padding:6px 12px;border:none;border-radius:5px;"
+                        onclick="reject(${v.voter_id})">Reject</button>
+                </td>
+            </tr>
+        `;
+    });
+}
+
+// APPROVE
+async function approve(id) {
+    await fetch(`http://127.0.0.1:3000/api/voters/accept/${id}`, {
+        method: "PUT"
+    });
+
+    alert("Approved!");
+    loadPending();
+}
+
+// REJECT
+async function reject(id) {
+    await fetch(`http://127.0.0.1:3000/api/voters/reject/${id}`, {
+        method: "PUT"
+    });
+
+    alert("Rejected!");
+    loadPending();
 }
 
 

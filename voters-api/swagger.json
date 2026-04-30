@@ -39,9 +39,7 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "Login result"
-          }
+          "200": { "description": "Login result" }
         }
       }
     },
@@ -65,9 +63,7 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "User created"
-          }
+          "200": { "description": "User created" }
         }
       }
     },
@@ -77,9 +73,7 @@
         "tags": ["Voters"],
         "summary": "Get all voters",
         "responses": {
-          "200": {
-            "description": "List of voters"
-          }
+          "200": { "description": "List of voters" }
         }
       },
       "post": {
@@ -105,9 +99,7 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "Voter added"
-          }
+          "200": { "description": "Voter added" }
         }
       }
     },
@@ -121,15 +113,11 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "schema": {
-              "type": "integer"
-            }
+            "schema": { "type": "integer" }
           }
         ],
         "responses": {
-          "200": {
-            "description": "Updated"
-          }
+          "200": { "description": "Updated" }
         }
       },
       "delete": {
@@ -140,15 +128,57 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "schema": {
-              "type": "integer"
-            }
+            "schema": { "type": "integer" }
           }
         ],
         "responses": {
-          "200": {
-            "description": "Deleted"
+          "200": { "description": "Deleted" }
+        }
+      }
+    },
+
+    "/api/voters/pending": {
+      "get": {
+        "tags": ["Voters"],
+        "summary": "Get all pending voters",
+        "responses": {
+          "200": { "description": "List of pending voters" }
+        }
+      }
+    },
+
+    "/api/voters/accept/{id}": {
+      "put": {
+        "tags": ["Voters"],
+        "summary": "Approve voter",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer" }
           }
+        ],
+        "responses": {
+          "200": { "description": "Voter approved" }
+        }
+      }
+    },
+
+    "/api/voters/reject/{id}": {
+      "put": {
+        "tags": ["Voters"],
+        "summary": "Reject voter",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "Voter rejected" }
         }
       }
     },
@@ -158,9 +188,7 @@
         "tags": ["Voters"],
         "summary": "Get precincts",
         "responses": {
-          "200": {
-            "description": "List of precincts"
-          }
+          "200": { "description": "List of precincts" }
         }
       }
     }
