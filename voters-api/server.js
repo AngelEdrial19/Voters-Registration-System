@@ -86,10 +86,10 @@ app.post('/api/voters', (req, res) => {
     const { firstname, lastname, address, age, birthdate, gender, precinct_id } = req.body;
 
     const sql = `
-        INSERT INTO voters 
-        (firstname, lastname, address, age, birthdate, gender, precinct_id)
-        VALUES (?, ?, ?, ?, ?, ?, ?)
-    `;
+INSERT INTO voters 
+(firstname, lastname, address, age, birthdate, gender, precinct_id, status)
+VALUES (?, ?, ?, ?, ?, ?, ?, 'pending')
+`;
 
     db.query(sql, [firstname, lastname, address, age, birthdate, gender, precinct_id],
         (err, result) => {
@@ -167,4 +167,38 @@ app.post('/api/register', (req, res) => {
 });
 app.get('/api/test-register', (req, res) => {
     res.json({ message: "Register route working" });
+});
+
+
+//==============================
+//      GET PENDING VOTERS
+//==============================
+app.get('/api/voters/pending', (req, res) => {
+    db.query("SELECT * FROM voters WHERE status='pending'", (err, result) => {
+        if (err) return res.status(500).send(err);
+        res.json(result);
+    });
+});
+
+
+//================================
+//       ACCEPT VOTERS
+//================================
+app.put('/api/voters/accept/:id', (req, res) => {
+    db.query("UPDATE voters SET status='approved' WHERE voter_id=?", [req.params.id],
+        (err) => {
+            if (err) return res.status(500).send(err);
+            res.json({ message: "Approved" });
+        });
+});
+
+//================================
+//       REJECT VOTERS
+//================================
+app.put('/api/voters/reject/:id', (req, res) => {
+    db.query("UPDATE voters SET status='rejected' WHERE voter_id=?", [req.params.id],
+        (err) => {
+            if (err) return res.status(500).send(err);
+            res.json({ message: "Rejected" });
+        });
 });
