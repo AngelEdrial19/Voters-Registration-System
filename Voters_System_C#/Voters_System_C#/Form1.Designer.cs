@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation7 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation4 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
+            this.panelmain = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.btnLogout = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_notification = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_Register = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnHome = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_Hide = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btn_Show = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
-            this.panelmain = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,6 +87,38 @@
             this.label1.Size = new System.Drawing.Size(125, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Voter Registration";
+            // 
+            // guna2Transition1
+            // 
+            this.guna2Transition1.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Leaf;
+            this.guna2Transition1.Cursor = null;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 1F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation4;
+            // 
+            // panelmain
+            // 
+            this.panelmain.BackColor = System.Drawing.Color.White;
+            this.guna2Transition1.SetDecoration(this.panelmain, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.panelmain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelmain.ForeColor = System.Drawing.SystemColors.Control;
+            this.panelmain.Location = new System.Drawing.Point(51, 0);
+            this.panelmain.Name = "panelmain";
+            this.panelmain.Size = new System.Drawing.Size(672, 466);
+            this.panelmain.TabIndex = 3;
             // 
             // btnLogout
             // 
@@ -238,42 +270,6 @@
             this.btn_Show.Size = new System.Drawing.Size(35, 37);
             this.btn_Show.TabIndex = 3;
             this.btn_Show.Click += new System.EventHandler(this.btn_Show_Click);
-            // 
-            // guna2Transition1
-            // 
-            this.guna2Transition1.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Leaf;
-            this.guna2Transition1.Cursor = null;
-            animation7.AnimateOnlyDifferences = true;
-            animation7.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.BlindCoeff")));
-            animation7.LeafCoeff = 1F;
-            animation7.MaxTime = 1F;
-            animation7.MinTime = 0F;
-            animation7.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicCoeff")));
-            animation7.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicShift")));
-            animation7.MosaicSize = 0;
-            animation7.Padding = new System.Windows.Forms.Padding(0);
-            animation7.RotateCoeff = 0F;
-            animation7.RotateLimit = 0F;
-            animation7.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.ScaleCoeff")));
-            animation7.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.SlideCoeff")));
-            animation7.TimeCoeff = 0F;
-            animation7.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation7;
-            // 
-            // panelmain
-            // 
-            this.panelmain.BackColor = System.Drawing.Color.Gray;
-            this.guna2Transition1.SetDecoration(this.panelmain, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.panelmain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelmain.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.panelmain.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.panelmain.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.panelmain.FillColor4 = System.Drawing.Color.Silver;
-            this.panelmain.ForeColor = System.Drawing.SystemColors.Control;
-            this.panelmain.Location = new System.Drawing.Point(51, 0);
-            this.panelmain.Name = "panelmain";
-            this.panelmain.Size = new System.Drawing.Size(672, 466);
-            this.panelmain.TabIndex = 3;
             // 
             // Form1
             // 

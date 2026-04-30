@@ -61,7 +61,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2PictureBox1);
             this.Name = "Home";
-            this.Size = new System.Drawing.Size(441, 517);
+            this.Size = new System.Drawing.Size(672, 466);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -244,9 +244,9 @@
             this.lblDate.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.Location = new System.Drawing.Point(343, 234);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(32, 14);
+            this.lblDate.Size = new System.Drawing.Size(57, 14);
             this.lblDate.TabIndex = 15;
-            this.lblDate.Text = "Date";
+            this.lblDate.Text = "Birthdate";
             // 
             // lblGender
             // 
