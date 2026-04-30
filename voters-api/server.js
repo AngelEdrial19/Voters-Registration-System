@@ -49,16 +49,23 @@ app.get('/test', (req, res) => {
 app.post('/api/login', (req, res) => {
     const { username, password } = req.body;
 
-    const sql = "SELECT * FROM users WHERE username=? AND password=?";
-    db.query(sql, [username, password], (err, result) => {
-        if (err) return res.status(500).send(err);
+    db.query(
+        "SELECT * FROM users WHERE username=? AND password=?",
+        [username, password],
+        (err, result) => {
+            if (err) return res.status(500).send(err);
 
-        if (result.length > 0) {
-            res.json({ success: true, user: result[0] });
-        } else {
-            res.json({ success: false, message: "Invalid credentials" });
+            if (result.length > 0) {
+                res.json({
+                    success: true,
+                    user_id: result[0].user_id, // 🔥 IMPORTANT
+                    username: result[0].username
+                });
+            } else {
+                res.json({ success: false });
+            }
         }
-    });
+    );
 });
 
 
@@ -83,19 +90,18 @@ app.get('/api/voters', (req, res) => {
 // ➕ ADD VOTER
 // =========================
 app.post('/api/voters', (req, res) => {
-    const { firstname, lastname, address, age, birthdate, gender, precinct_id } = req.body;
+    const { firstname, lastname, address, age, birthdate, gender, precinct_id, status, user_id } = req.body;
 
-    const sql = `
-INSERT INTO voters 
-(firstname, lastname, address, age, birthdate, gender, precinct_id, status)
-VALUES (?, ?, ?, ?, ?, ?, ?, 'pending')
-`;
-
-    db.query(sql, [firstname, lastname, address, age, birthdate, gender, precinct_id],
-        (err, result) => {
-            if (err) return res.status(500).send(err);
-            res.json({ message: "Voter added successfully" });
-        });
+    db.query(`
+        INSERT INTO voters 
+        (firstname, lastname, address, age, birthdate, gender, precinct_id, status, user_id)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+    `,
+    [firstname, lastname, address, age, birthdate, gender, precinct_id, status, user_id],
+    (err) => {
+        if (err) return res.status(500).send(err);
+        res.json({ success: true });
+    });
 });
 
 
@@ -158,12 +164,14 @@ app.listen(3000, () => {
 app.post('/api/register', (req, res) => {
     const { username, password } = req.body;
 
-    const sql = "INSERT INTO users (username, password) VALUES (?, ?)";
-    db.query(sql, [username, password], (err, result) => {
-        if (err) return res.status(500).send(err);
-
-        res.json({ success: true, message: "Account created successfully" });
-    });
+    db.query(
+        "INSERT INTO users (username, password) VALUES (?, ?)",
+        [username, password],
+        (err, result) => {
+            if (err) return res.status(500).send(err);
+            res.json({ success: true });
+        }
+    );
 });
 app.get('/api/test-register', (req, res) => {
     res.json({ message: "Register route working" });

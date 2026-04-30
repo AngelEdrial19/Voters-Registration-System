@@ -42,6 +42,7 @@ namespace Voters_System_C_
                 gender = cmbGender.Text,
                 precinct_id = cmbPrecinct.SelectedValue,
                 status = "pending" // 🔥 IMPORTANT
+                user_id = Properties.Settings.Default.UserId
             };
 
             var json = JsonConvert.SerializeObject(data);

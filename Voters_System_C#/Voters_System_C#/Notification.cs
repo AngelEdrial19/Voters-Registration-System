@@ -27,6 +27,7 @@ namespace Voters_System_C_
             public string firstname { get; set; }
             public string lastname { get; set; }
             public string status { get; set; }
+            public int user_id { get; set; }
         }
 
         private async void LoadNotification()
@@ -41,7 +42,7 @@ namespace Voters_System_C_
 
                 string fullname = Properties.Settings.Default.FullName;
 
-                var user = voters.FirstOrDefault(v => (v.firstname + " " + v.lastname) == fullname);
+                var user = voters.FirstOrDefault(v => v.user_id == Properties.Settings.Default.UserId);
 
                 if (user != null)
                 {

@@ -93,6 +93,36 @@ namespace Voters_System_C_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_k2bjwdk2bjwdk2bj {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_k2bjwdk2bjwdk2bj", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_l9m3khl9m3khl9m3 {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_l9m3khl9m3khl9m3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_wzqjhfwzqjhfwzqj {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_wzqjhfwzqjhfwzqj", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home_button__1_ {
             get {
                 object obj = ResourceManager.GetObject("home-button (1)", resourceCulture);
