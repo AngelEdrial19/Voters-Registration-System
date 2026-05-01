@@ -44,7 +44,7 @@ namespace Voters_System_C_
 
                 MessageBox.Show("Login successful");
 
-                new Home().Show();
+                new Form1().Show();
                 this.Hide();
             }
             else

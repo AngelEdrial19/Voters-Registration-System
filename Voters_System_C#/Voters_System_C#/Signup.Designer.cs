@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.linkLogin = new System.Windows.Forms.LinkLabel();
             this.btnCreateAccount = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.label2 = new System.Windows.Forms.Label();
             this.chckboxShowPass = new Guna.UI2.WinForms.Guna2CheckBox();
             this.txtCreatePassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCreateUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.linkLogin = new System.Windows.Forms.LinkLabel();
-            this.label2 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,6 +62,18 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(400, 306);
             this.guna2GradientPanel1.TabIndex = 1;
             // 
+            // linkLogin
+            // 
+            this.linkLogin.AutoSize = true;
+            this.linkLogin.BackColor = System.Drawing.Color.Transparent;
+            this.linkLogin.Location = new System.Drawing.Point(197, 284);
+            this.linkLogin.Name = "linkLogin";
+            this.linkLogin.Size = new System.Drawing.Size(37, 13);
+            this.linkLogin.TabIndex = 8;
+            this.linkLogin.TabStop = true;
+            this.linkLogin.Text = "Log In";
+            this.linkLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLogin_LinkClicked);
+            // 
             // btnCreateAccount
             // 
             this.btnCreateAccount.Animated = true;
@@ -83,6 +95,18 @@
             this.btnCreateAccount.Text = "Create Account";
             this.btnCreateAccount.UseTransparentBackground = true;
             this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(145, 263);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(140, 14);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Already have a account?";
             // 
             // chckboxShowPass
             // 
@@ -165,30 +189,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "SIGN UP";
             // 
-            // linkLogin
-            // 
-            this.linkLogin.AutoSize = true;
-            this.linkLogin.BackColor = System.Drawing.Color.Transparent;
-            this.linkLogin.Location = new System.Drawing.Point(197, 284);
-            this.linkLogin.Name = "linkLogin";
-            this.linkLogin.Size = new System.Drawing.Size(37, 13);
-            this.linkLogin.TabIndex = 8;
-            this.linkLogin.TabStop = true;
-            this.linkLogin.Text = "Log In";
-            this.linkLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLogin_LinkClicked);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(145, 263);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 14);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Already have a account?";
-            // 
             // Signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,6 +200,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Signup";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Signup";
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();

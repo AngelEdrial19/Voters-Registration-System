@@ -18,6 +18,7 @@ namespace Voters_System_C_
             InitializeComponent();
         }
 
+       
         private void addUserControl(UserControl uc)
         {
 
