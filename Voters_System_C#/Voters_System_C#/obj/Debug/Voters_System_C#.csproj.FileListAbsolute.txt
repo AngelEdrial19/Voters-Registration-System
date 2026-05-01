@@ -16,3 +16,5 @@ C:\Voters_Project\Voters_System_C#\Voters_System_C#\obj\Debug\Voters_System_C_.N
 C:\Voters_Project\Voters_System_C#\Voters_System_C#\obj\Debug\Voters_System_C_.RegisterVoters.resources
 C:\Voters_Project\Voters_System_C#\Voters_System_C#\bin\Debug\Newtonsoft.Json.dll
 C:\Voters_Project\Voters_System_C#\Voters_System_C#\bin\Debug\Newtonsoft.Json.xml
+C:\Voters_Project\Voters_System_C#\Voters_System_C#\obj\Debug\Voters_System_C_.Login.resources
+C:\Voters_Project\Voters_System_C#\Voters_System_C#\obj\Debug\Voters_System_C_.Signup.resources

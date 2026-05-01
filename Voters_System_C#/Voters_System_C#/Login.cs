@@ -52,5 +52,11 @@ namespace Voters_System_C_
                 MessageBox.Show("Invalid login");
             }
         }
+
+        private void linkCreate_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            new Signup().Show();
+            this.Hide();
+        }
     }
 }

@@ -36,6 +36,8 @@
             this.txtCreatePassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCreateUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.linkLogin = new System.Windows.Forms.LinkLabel();
+            this.label2 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +49,9 @@
             // 
             this.guna2GradientPanel1.BackgroundImage = global::Voters_System_C_.Properties.Resources.Gemini_Generated_Image_wzqjhfwzqjhfwzqj;
             this.guna2GradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2GradientPanel1.Controls.Add(this.linkLogin);
             this.guna2GradientPanel1.Controls.Add(this.btnCreateAccount);
+            this.guna2GradientPanel1.Controls.Add(this.label2);
             this.guna2GradientPanel1.Controls.Add(this.chckboxShowPass);
             this.guna2GradientPanel1.Controls.Add(this.txtCreatePassword);
             this.guna2GradientPanel1.Controls.Add(this.txtCreateUsername);
@@ -161,6 +165,30 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "SIGN UP";
             // 
+            // linkLogin
+            // 
+            this.linkLogin.AutoSize = true;
+            this.linkLogin.BackColor = System.Drawing.Color.Transparent;
+            this.linkLogin.Location = new System.Drawing.Point(197, 284);
+            this.linkLogin.Name = "linkLogin";
+            this.linkLogin.Size = new System.Drawing.Size(37, 13);
+            this.linkLogin.TabIndex = 8;
+            this.linkLogin.TabStop = true;
+            this.linkLogin.Text = "Log In";
+            this.linkLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLogin_LinkClicked);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(145, 263);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(140, 14);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Already have a account?";
+            // 
             // Signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -188,5 +216,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtCreatePassword;
         private Guna.UI2.WinForms.Guna2TextBox txtCreateUsername;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel linkLogin;
+        private System.Windows.Forms.Label label2;
     }
 }

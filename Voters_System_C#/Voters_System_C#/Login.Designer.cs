@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.linkCreate = new System.Windows.Forms.LinkLabel();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnLogIn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.chckboxShowPass = new Guna.UI2.WinForms.Guna2CheckBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.linkCreate = new System.Windows.Forms.LinkLabel();
             this.guna2GradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +61,30 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(400, 306);
             this.guna2GradientPanel1.TabIndex = 0;
+            // 
+            // linkCreate
+            // 
+            this.linkCreate.AutoSize = true;
+            this.linkCreate.BackColor = System.Drawing.Color.Transparent;
+            this.linkCreate.Location = new System.Drawing.Point(172, 284);
+            this.linkCreate.Name = "linkCreate";
+            this.linkCreate.Size = new System.Drawing.Size(81, 13);
+            this.linkCreate.TabIndex = 6;
+            this.linkCreate.TabStop = true;
+            this.linkCreate.Text = "Create Account";
+            this.linkCreate.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCreate_LinkClicked);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(145, 263);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(134, 14);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Don\'t have an account?";
             // 
             // btnLogIn
             // 
@@ -164,29 +188,6 @@
             this.label1.Size = new System.Drawing.Size(87, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "LOG IN";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(145, 263);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 14);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Don\'t have an account?";
-            // 
-            // linkCreate
-            // 
-            this.linkCreate.AutoSize = true;
-            this.linkCreate.BackColor = System.Drawing.Color.Transparent;
-            this.linkCreate.Location = new System.Drawing.Point(180, 284);
-            this.linkCreate.Name = "linkCreate";
-            this.linkCreate.Size = new System.Drawing.Size(81, 13);
-            this.linkCreate.TabIndex = 6;
-            this.linkCreate.TabStop = true;
-            this.linkCreate.Text = "Create Account";
             // 
             // Login
             // 

@@ -41,7 +41,7 @@ namespace Voters_System_C_
                 birthdate = DateTimePicker.Value.ToString("yyyy-MM-dd"),
                 gender = cmbGender.Text,
                 precinct_id = cmbPrecinct.SelectedValue,
-                status = "pending" // 🔥 IMPORTANT
+                status = "pending",// 🔥 IMPORTANT
                 user_id = Properties.Settings.Default.UserId
             };
 
