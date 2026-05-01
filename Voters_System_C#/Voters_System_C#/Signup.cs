@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Http;
+using Newtonsoft.Json;
 
 namespace Voters_System_C_
 {
@@ -15,6 +17,11 @@ namespace Voters_System_C_
         public Signup()
         {
             InitializeComponent();
+        }
+
+        private void btnCreateAccount_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
