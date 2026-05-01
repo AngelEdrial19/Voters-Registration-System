@@ -90,20 +90,21 @@ app.get('/api/voters', (req, res) => {
 // ➕ ADD VOTER
 // =========================
 app.post('/api/voters', (req, res) => {
-    const { firstname, lastname, address, age, birthdate, gender, precinct_id, status, user_id } = req.body;
+  const { firstname, lastname, address, age, birthdate, gender, precinct_id, user_id } = req.body;
 
-    db.query(`
-        INSERT INTO voters 
-        (firstname, lastname, address, age, birthdate, gender, precinct_id, status, user_id)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-    `,
-    [firstname, lastname, address, age, birthdate, gender, precinct_id, status, user_id],
+  const sql = `
+    INSERT INTO voters
+    (firstname, lastname, address, age, birthdate, gender, precinct_id, status, user_id)
+    VALUES (?, ?, ?, ?, ?, ?, ?, 'pending', ?)
+  `;
+
+  db.query(sql, [firstname, lastname, address, age, birthdate, gender, precinct_id, user_id],
     (err) => {
-        if (err) return res.status(500).send(err);
-        res.json({ success: true });
-    });
+      if (err) return res.status(500).send(err);
+      res.json({ success: true });
+    }
+  );
 });
-
 
 // =========================
 // ✏️ UPDATE VOTER
@@ -178,11 +179,36 @@ app.get('/api/test-register', (req, res) => {
 });
 
 
+// GET approved voters (LIST OF VOTERS)
+app.get('/api/voters', (req, res) => {
+    const sql = `
+        SELECT v.*, p.precinct_no
+        FROM voters v
+        JOIN precincts p ON v.precinct_id = p.precinct_id
+        WHERE v.status = 'approved'
+        ORDER BY v.voter_id DESC
+    `;
+
+    db.query(sql, (err, result) => {
+        if (err) return res.status(500).send(err);
+        res.json(result);
+    });
+});
+
+
 //==============================
 //      GET PENDING VOTERS
 //==============================
 app.get('/api/voters/pending', (req, res) => {
-    db.query("SELECT * FROM voters WHERE status='pending'", (err, result) => {
+    const sql = `
+        SELECT v.*, p.precinct_no 
+        FROM voters v
+        JOIN precincts p ON v.precinct_id = p.precinct_id
+        WHERE v.status = 'pending'
+        ORDER BY v.voter_id DESC
+    `;
+
+    db.query(sql, (err, result) => {
         if (err) return res.status(500).send(err);
         res.json(result);
     });
@@ -193,20 +219,39 @@ app.get('/api/voters/pending', (req, res) => {
 //       ACCEPT VOTERS
 //================================
 app.put('/api/voters/accept/:id', (req, res) => {
-    db.query("UPDATE voters SET status='approved' WHERE voter_id=?", [req.params.id],
-        (err) => {
-            if (err) return res.status(500).send(err);
-            res.json({ message: "Approved" });
-        });
+    const id = req.params.id;
+
+    db.query("UPDATE voters SET status='approved' WHERE voter_id=?", [id], (err) => {
+        if (err) return res.status(500).send(err);
+        res.json({ success: true });
+    });
 });
 
 //================================
 //       REJECT VOTERS
 //================================
 app.put('/api/voters/reject/:id', (req, res) => {
-    db.query("UPDATE voters SET status='rejected' WHERE voter_id=?", [req.params.id],
-        (err) => {
-            if (err) return res.status(500).send(err);
-            res.json({ message: "Rejected" });
-        });
+    const id = req.params.id;
+
+    console.log("Rejecting ID:", id); // 🔥
+
+
+    db.query(
+        "UPDATE voters SET status='rejected' WHERE voter_id=?",
+        [id],
+        (err, result) => {
+            if (err) {
+                console.log(err);
+                return res.status(500).send(err);
+            }
+
+            console.log("Affected rows:", result.affectedRows);
+
+            if (result.affectedRows === 0) {
+                return res.json({ success: false, message: "No record updated" });
+            }
+
+            res.json({ success: true });
+        }
+    );
 });

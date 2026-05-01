@@ -203,7 +203,7 @@
             this.txtAddress.SelectedText = "";
             this.txtAddress.Size = new System.Drawing.Size(541, 36);
             this.txtAddress.TabIndex = 13;
-            this.txtAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // DateTimePicker
             // 

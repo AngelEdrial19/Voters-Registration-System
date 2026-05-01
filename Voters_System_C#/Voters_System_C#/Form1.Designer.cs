@@ -265,7 +265,7 @@
             this.panelmain.BackColor = System.Drawing.Color.White;
             this.guna2Transition1.SetDecoration(this.panelmain, Guna.UI2.AnimatorNS.DecorationType.None);
             this.panelmain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelmain.ForeColor = System.Drawing.SystemColors.Control;
+            this.panelmain.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panelmain.Location = new System.Drawing.Point(51, 0);
             this.panelmain.Name = "panelmain";
             this.panelmain.Size = new System.Drawing.Size(672, 466);

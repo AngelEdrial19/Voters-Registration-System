@@ -350,7 +350,7 @@ function showSection(id) {
 
 // LOAD DASHBOARD
 async function loadDashboard() {
-    const res = await fetch("http://127.0.0.1:3000/api/voters");
+    const res = await fetch("http://localhost:3000/api/voters");
     const data = await res.json();
 
     document.getElementById("totalVoters").innerText = data.length;
@@ -408,8 +408,10 @@ async function addVoter() {
 
 // LOAD VOTERS
 async function loadVoters() {
-    const res = await fetch("http://127.0.0.1:3000/api/voters");
+     const res = await fetch("http://localhost:3000/api/voters");
     const data = await res.json();
+
+    console.log("VOTERS:", data);
 
     const table = document.getElementById("tableBody");
     table.innerHTML = "";
@@ -491,6 +493,17 @@ async function reject(id) {
 
     alert("Rejected!");
     loadPending();
+}
+
+async function rejectVoter(id) {
+    await fetch(`http://localhost:3000/api/voters/reject/${id}`, {
+        method: "PUT"
+    });
+
+    // 🔥 IMPORTANT KAAYO
+    loadPending(); 
+    loadVoters(); 
+    loadDashboard();
 }
 
 
