@@ -227,6 +227,46 @@ button.action:hover {
     transform: translateY(-1px); /* Mo-naog gamay inig click */
     box-shadow: 0 4px 6px -1px rgba(14, 165, 233, 0.2);
 }
+
+.status-badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: white;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* STATUS COLORS */
+.status-badge.approved {
+    background: #16a34a;
+}
+
+.status-badge.pending {
+    background: #f59e0b;
+}
+
+.status-badge.rejected {
+    background: #dc2626;
+}
+
+/* 🔥 DELETE BUTTON ENHANCED (UPDATE EXISTING button.action) */
+button.action {
+    padding: 8px 16px;
+    background: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 8px; /* 🔥 mas round */
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease; /* 🔥 smoother */
+}
+
+button.action:hover {
+    background: #dc2626;
+    transform: scale(1.05); /* 🔥 zoom effect */
+    box-shadow: 0 4px 10px rgba(220, 38, 38, 0.3);
+}
 </style>
 
 
@@ -306,10 +346,12 @@ button.action:hover {
                     <th>Name</th>
                     <th>Address</th>
                     <th>Age</th>
+                    <th>Gender</th> 
+                    <th>Status</th> 
                     <th>Action</th>
                 </tr>
             </thead>
-            <tbody id="tableBody"></tbody>
+            <tbody id="votersTable"></tbody>
         </table>
     </div>
 
@@ -323,6 +365,7 @@ button.action:hover {
                 <th>Address</th>
                 <th>Age</th>
                 <th>Action</th>
+
             </tr>
         </thead>
         <tbody id="pendingBody"></tbody>
@@ -332,6 +375,8 @@ button.action:hover {
 </div>
 
 <script>
+
+
 
 // SWITCH SECTIONS
 function showSection(id) {
@@ -408,34 +453,56 @@ async function addVoter() {
 
 // LOAD VOTERS
 async function loadVoters() {
-     const res = await fetch("http://localhost:3000/api/voters");
-    const data = await res.json();
+    try {
+        const res = await fetch("http://localhost:3000/api/voters");
+        const data = await res.json();
 
-    console.log("VOTERS:", data);
+        const table = document.getElementById("votersTable");
+        table.innerHTML = "";
 
-    const table = document.getElementById("tableBody");
-    table.innerHTML = "";
+        data.forEach(v => {
 
-    data.forEach(v => {
-        table.innerHTML += `
-            <tr>
-                <td>${v.firstname} ${v.lastname}</td>
-                <td>${v.address}</td>
-                <td>${v.age}</td>
-                <td><button class="action" onclick="deleteVoter(${v.voter_id})">Delete</button></td>
-            </tr>
-        `;
-    });
+            // 🔥 status color
+            let statusColor = "gray";
+            if (v.status === "approved") statusColor = "green";
+            if (v.status === "pending") statusColor = "orange";
+            if (v.status === "rejected") statusColor = "red";
+
+            table.innerHTML += `
+                <tr>
+                    <td>${v.firstname} ${v.lastname}</td>
+                    <td>${v.address}</td>
+                    <td>${v.age}</td>
+                    <td>${v.gender}</td>
+                    <td>
+                        <span class="status-badge ${v.status}">
+                        ${v.status.toUpperCase()}
+                        </span>
+                    </td>
+                    <td>
+                        <button class="action" onclick="deleteVoter(${v.voter_id})">
+                        Delete
+                        </button>
+                    </td>
+                </tr>
+            `;
+        });
+
+    } catch (error) {
+        console.error("Error loading voters:", error);
+    }
 }
 
 
 // DELETE
 async function deleteVoter(id) {
-    await fetch(`http://127.0.0.1:3000/api/voters/${id}`, {
+    if (!confirm("Delete this voter?")) return;
+
+    await fetch(`http://localhost:3000/api/voters/${id}`, {
         method: "DELETE"
     });
 
-    loadVoters();
+    loadVoters(); // refresh
 }
 
 
@@ -495,16 +562,11 @@ async function reject(id) {
     loadPending();
 }
 
-async function rejectVoter(id) {
-    await fetch(`http://localhost:3000/api/voters/reject/${id}`, {
-        method: "PUT"
-    });
+window.onload = function () {
+    console.log("PAGE LOADED");   // 🔥 debug
+    loadVoters();
+};
 
-    // 🔥 IMPORTANT KAAYO
-    loadPending(); 
-    loadVoters(); 
-    loadDashboard();
-}
 
 
 // INIT

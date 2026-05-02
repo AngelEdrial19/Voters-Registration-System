@@ -203,13 +203,14 @@
             this.txtAddress.SelectedText = "";
             this.txtAddress.Size = new System.Drawing.Size(541, 36);
             this.txtAddress.TabIndex = 13;
-            this.txtAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // DateTimePicker
             // 
             this.DateTimePicker.Animated = true;
             this.DateTimePicker.AutoRoundedCorners = true;
             this.DateTimePicker.BackColor = System.Drawing.Color.Transparent;
+            this.DateTimePicker.BorderThickness = 1;
             this.DateTimePicker.Checked = true;
             this.DateTimePicker.FillColor = System.Drawing.Color.LightGray;
             this.DateTimePicker.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -247,6 +248,7 @@
             // 
             this.cmbGender.AutoRoundedCorners = true;
             this.cmbGender.BackColor = System.Drawing.Color.Transparent;
+            this.cmbGender.BorderColor = System.Drawing.Color.Black;
             this.cmbGender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGender.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -263,6 +265,7 @@
             // 
             this.cmbPrecinct.AutoRoundedCorners = true;
             this.cmbPrecinct.BackColor = System.Drawing.Color.Transparent;
+            this.cmbPrecinct.BorderColor = System.Drawing.Color.Black;
             this.cmbPrecinct.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbPrecinct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPrecinct.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -291,6 +294,7 @@
             this.btnSave.Animated = true;
             this.btnSave.AutoRoundedCorners = true;
             this.btnSave.BackColor = System.Drawing.Color.Transparent;
+            this.btnSave.BorderThickness = 1;
             this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
