@@ -180,5 +180,17 @@
   <ItemGroup>
     <None Include="Resources\Gemini_Generated_Image_wzqjhfwzqjhfwzqj.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\demonstration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gemini_Generated_Image_h53ypxh53ypxh53y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gemini_Generated_Image_6o2mnq6o2mnq6o2m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gemini_Generated_Image_fzh0qfzh0qfzh0qf.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

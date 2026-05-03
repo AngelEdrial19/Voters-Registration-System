@@ -3,11 +3,23 @@
   "WorkspaceRootPath": "C:\\Voters_Project\\Voters_System_C#\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|C:\\Voters_Project\\Voters_System_C#\\voters_system_c#\\registervoters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|solutionrelative:voters_system_c#\\registervoters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|C:\\Voters_Project\\Voters_System_C#\\voters_system_c#\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|solutionrelative:voters_system_c#\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|c:\\voters_project\\voters_system_c#\\voters_system_c#\\registervoters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|C:\\Voters_Project\\Voters_System_C#\\voters_system_c#\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|solutionrelative:voters_system_c#\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|C:\\Voters_Project\\Voters_System_C#\\voters_system_c#\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|solutionrelative:voters_system_c#\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|C:\\Voters_Project\\Voters_System_C#\\voters_system_c#\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|solutionrelative:voters_system_c#\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|C:\\Voters_Project\\Voters_System_C#\\voters_system_c#\\registervoters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|solutionrelative:voters_system_c#\\registervoters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -15,36 +27,24 @@
       "RelativeMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|solutionrelative:voters_system_c#\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|C:\\Voters_Project\\Voters_System_C#\\voters_system_c#\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|solutionrelative:voters_system_c#\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|C:\\Voters_Project\\Voters_System_C#\\voters_system_c#\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|solutionrelative:voters_system_c#\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|C:\\Voters_Project\\Voters_System_C#\\voters_system_c#\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|solutionrelative:voters_system_c#\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|C:\\Voters_Project\\Voters_System_C#\\voters_system_c#\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|solutionrelative:voters_system_c#\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|C:\\Voters_Project\\Voters_System_C#\\voters_system_c#\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|solutionrelative:voters_system_c#\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|C:\\Voters_Project\\Voters_System_C#\\voters_system_c#\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|solutionrelative:voters_system_c#\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|C:\\Voters_Project\\Voters_System_C#\\voters_system_c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|solutionrelative:voters_system_c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|C:\\Voters_Project\\Voters_System_C#\\voters_system_c#\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|solutionrelative:voters_system_c#\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|C:\\Voters_Project\\Voters_System_C#\\voters_system_c#\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|solutionrelative:voters_system_c#\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|C:\\Voters_Project\\Voters_System_C#\\voters_system_c#\\registervoters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|solutionrelative:voters_system_c#\\registervoters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|C:\\Voters_Project\\Voters_System_C#\\voters_system_c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|solutionrelative:voters_system_c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D274215A-0141-4BB2-B178-4E9C00268C3A}|Voters_System_C#\\Voters_System_C#.csproj|C:\\Voters_Project\\Voters_System_C#\\voters_system_c#\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,11 +58,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "Login.cs [Design]",
               "DocumentMoniker": "C:\\Voters_Project\\Voters_System_C#\\Voters_System_C#\\Login.cs",
               "RelativeDocumentMoniker": "Voters_System_C#\\Login.cs",
@@ -70,11 +70,12 @@
               "RelativeToolTip": "Voters_System_C#\\Login.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-30T11:13:20.689Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Signup.cs [Design]",
               "DocumentMoniker": "C:\\Voters_Project\\Voters_System_C#\\Voters_System_C#\\Signup.cs",
               "RelativeDocumentMoniker": "Voters_System_C#\\Signup.cs",
@@ -82,11 +83,12 @@
               "RelativeToolTip": "Voters_System_C#\\Signup.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-30T11:54:49.615Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Voters_Project\\Voters_System_C#\\Voters_System_C#\\Form1.cs",
               "RelativeDocumentMoniker": "Voters_System_C#\\Form1.cs",
@@ -94,11 +96,12 @@
               "RelativeToolTip": "Voters_System_C#\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-30T10:00:48.571Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
               "Title": "Home.cs [Design]",
               "DocumentMoniker": "C:\\Voters_Project\\Voters_System_C#\\Voters_System_C#\\Home.cs",
               "RelativeDocumentMoniker": "Voters_System_C#\\Home.cs",
@@ -106,11 +109,12 @@
               "RelativeToolTip": "Voters_System_C#\\Home.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-30T10:18:32.929Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "RegisterVoters.cs [Design]",
               "DocumentMoniker": "C:\\Voters_Project\\Voters_System_C#\\Voters_System_C#\\RegisterVoters.cs",
               "RelativeDocumentMoniker": "Voters_System_C#\\RegisterVoters.cs",
@@ -123,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Notification.cs [Design]",
               "DocumentMoniker": "C:\\Voters_Project\\Voters_System_C#\\Voters_System_C#\\Notification.cs",
               "RelativeDocumentMoniker": "Voters_System_C#\\Notification.cs",
@@ -136,44 +140,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Voters_Project\\Voters_System_C#\\Voters_System_C#\\Login.cs",
+              "RelativeDocumentMoniker": "Voters_System_C#\\Login.cs",
+              "ToolTip": "C:\\Voters_Project\\Voters_System_C#\\Voters_System_C#\\Login.cs",
+              "RelativeToolTip": "Voters_System_C#\\Login.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAgwBYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T11:36:56.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Voters_Project\\Voters_System_C#\\Voters_System_C#\\Form1.cs",
+              "RelativeDocumentMoniker": "Voters_System_C#\\Form1.cs",
+              "ToolTip": "C:\\Voters_Project\\Voters_System_C#\\Voters_System_C#\\Form1.cs",
+              "RelativeToolTip": "Voters_System_C#\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-01T05:52:34.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Signup.cs",
+              "DocumentMoniker": "C:\\Voters_Project\\Voters_System_C#\\Voters_System_C#\\Signup.cs",
+              "RelativeDocumentMoniker": "Voters_System_C#\\Signup.cs",
+              "ToolTip": "C:\\Voters_Project\\Voters_System_C#\\Voters_System_C#\\Signup.cs",
+              "RelativeToolTip": "Voters_System_C#\\Signup.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAcwCIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-01T04:50:48.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "RegisterVoters.cs",
               "DocumentMoniker": "C:\\Voters_Project\\Voters_System_C#\\Voters_System_C#\\RegisterVoters.cs",
               "RelativeDocumentMoniker": "Voters_System_C#\\RegisterVoters.cs",
               "ToolTip": "C:\\Voters_Project\\Voters_System_C#\\Voters_System_C#\\RegisterVoters.cs",
               "RelativeToolTip": "Voters_System_C#\\RegisterVoters.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAowCsAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAowCsAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-30T10:21:04.059Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Voters_Project\\Voters_System_C#\\Voters_System_C#\\Form1.cs",
-              "RelativeDocumentMoniker": "Voters_System_C#\\Form1.cs",
-              "ToolTip": "C:\\Voters_Project\\Voters_System_C#\\Voters_System_C#\\Form1.cs",
-              "RelativeToolTip": "Voters_System_C#\\Form1.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABQAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-01T05:52:34.245Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Login.cs",
-              "DocumentMoniker": "C:\\Voters_Project\\Voters_System_C#\\Voters_System_C#\\Login.cs",
-              "RelativeDocumentMoniker": "Voters_System_C#\\Login.cs",
-              "ToolTip": "C:\\Voters_Project\\Voters_System_C#\\Voters_System_C#\\Login.cs",
-              "RelativeToolTip": "Voters_System_C#\\Login.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAcwCEAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-30T11:36:56.656Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Voters_Project\\Voters_System_C#\\Voters_System_C#\\Program.cs",
               "RelativeDocumentMoniker": "Voters_System_C#\\Program.cs",
@@ -182,18 +201,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-01T05:36:07.079Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Signup.cs",
-              "DocumentMoniker": "C:\\Voters_Project\\Voters_System_C#\\Voters_System_C#\\Signup.cs",
-              "RelativeDocumentMoniker": "Voters_System_C#\\Signup.cs",
-              "ToolTip": "C:\\Voters_Project\\Voters_System_C#\\Voters_System_C#\\Signup.cs",
-              "RelativeToolTip": "Voters_System_C#\\Signup.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAwwDUAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-01T04:50:48.806Z"
             },
             {
               "$type": "Document",

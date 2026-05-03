@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtFirstname = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblFirstname = new System.Windows.Forms.Label();
             this.lblLastname = new System.Windows.Forms.Label();
@@ -45,6 +44,9 @@
             this.cmbPrecinct = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lblPrecinct = new System.Windows.Forms.Label();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,17 +59,6 @@
             this.label1.Size = new System.Drawing.Size(122, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "Register Voters";
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::Voters_System_C_.Properties.Resources.document;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 10);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(28, 34);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 3;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // txtFirstname
             // 
@@ -84,12 +75,12 @@
             this.txtFirstname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFirstname.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtFirstname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFirstname.Location = new System.Drawing.Point(47, 90);
+            this.txtFirstname.Location = new System.Drawing.Point(22, 91);
             this.txtFirstname.Name = "txtFirstname";
             this.txtFirstname.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtFirstname.PlaceholderText = "Enter Firstname";
             this.txtFirstname.SelectedText = "";
-            this.txtFirstname.Size = new System.Drawing.Size(254, 36);
+            this.txtFirstname.Size = new System.Drawing.Size(220, 36);
             this.txtFirstname.TabIndex = 6;
             this.txtFirstname.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -97,7 +88,7 @@
             // 
             this.lblFirstname.AutoSize = true;
             this.lblFirstname.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstname.Location = new System.Drawing.Point(54, 73);
+            this.lblFirstname.Location = new System.Drawing.Point(29, 74);
             this.lblFirstname.Name = "lblFirstname";
             this.lblFirstname.Size = new System.Drawing.Size(62, 14);
             this.lblFirstname.TabIndex = 7;
@@ -107,7 +98,7 @@
             // 
             this.lblLastname.AutoSize = true;
             this.lblLastname.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastname.Location = new System.Drawing.Point(343, 74);
+            this.lblLastname.Location = new System.Drawing.Point(289, 74);
             this.lblLastname.Name = "lblLastname";
             this.lblLastname.Size = new System.Drawing.Size(59, 14);
             this.lblLastname.TabIndex = 8;
@@ -128,12 +119,12 @@
             this.txtLastname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLastname.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtLastname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLastname.Location = new System.Drawing.Point(334, 90);
+            this.txtLastname.Location = new System.Drawing.Point(284, 91);
             this.txtLastname.Name = "txtLastname";
             this.txtLastname.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtLastname.PlaceholderText = "Enter Lastname";
             this.txtLastname.SelectedText = "";
-            this.txtLastname.Size = new System.Drawing.Size(254, 36);
+            this.txtLastname.Size = new System.Drawing.Size(220, 36);
             this.txtLastname.TabIndex = 9;
             this.txtLastname.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -141,7 +132,7 @@
             // 
             this.lblAge.AutoSize = true;
             this.lblAge.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAge.Location = new System.Drawing.Point(54, 234);
+            this.lblAge.Location = new System.Drawing.Point(29, 235);
             this.lblAge.Name = "lblAge";
             this.lblAge.Size = new System.Drawing.Size(28, 14);
             this.lblAge.TabIndex = 10;
@@ -162,12 +153,12 @@
             this.txtAge.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAge.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtAge.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAge.Location = new System.Drawing.Point(47, 251);
+            this.txtAge.Location = new System.Drawing.Point(22, 252);
             this.txtAge.Name = "txtAge";
             this.txtAge.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtAge.PlaceholderText = "Enter Age";
             this.txtAge.SelectedText = "";
-            this.txtAge.Size = new System.Drawing.Size(254, 36);
+            this.txtAge.Size = new System.Drawing.Size(220, 36);
             this.txtAge.TabIndex = 11;
             this.txtAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -175,7 +166,7 @@
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.Location = new System.Drawing.Point(54, 158);
+            this.lblAddress.Location = new System.Drawing.Point(29, 159);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(52, 14);
             this.lblAddress.TabIndex = 12;
@@ -196,12 +187,12 @@
             this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.Location = new System.Drawing.Point(47, 175);
+            this.txtAddress.Location = new System.Drawing.Point(22, 176);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtAddress.PlaceholderText = "Enter Address";
             this.txtAddress.SelectedText = "";
-            this.txtAddress.Size = new System.Drawing.Size(541, 36);
+            this.txtAddress.Size = new System.Drawing.Size(495, 36);
             this.txtAddress.TabIndex = 13;
             this.txtAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -212,14 +203,14 @@
             this.DateTimePicker.BackColor = System.Drawing.Color.Transparent;
             this.DateTimePicker.BorderThickness = 1;
             this.DateTimePicker.Checked = true;
-            this.DateTimePicker.FillColor = System.Drawing.Color.LightGray;
+            this.DateTimePicker.FillColor = System.Drawing.Color.White;
             this.DateTimePicker.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.DateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.DateTimePicker.Location = new System.Drawing.Point(337, 251);
+            this.DateTimePicker.Location = new System.Drawing.Point(284, 252);
             this.DateTimePicker.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.DateTimePicker.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.DateTimePicker.Name = "DateTimePicker";
-            this.DateTimePicker.Size = new System.Drawing.Size(251, 36);
+            this.DateTimePicker.Size = new System.Drawing.Size(220, 36);
             this.DateTimePicker.TabIndex = 14;
             this.DateTimePicker.UseTransparentBackground = true;
             this.DateTimePicker.Value = new System.DateTime(2026, 4, 30, 14, 2, 25, 429);
@@ -228,7 +219,7 @@
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.Location = new System.Drawing.Point(343, 234);
+            this.lblDate.Location = new System.Drawing.Point(289, 235);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(57, 14);
             this.lblDate.TabIndex = 15;
@@ -238,7 +229,7 @@
             // 
             this.lblGender.AutoSize = true;
             this.lblGender.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGender.Location = new System.Drawing.Point(54, 311);
+            this.lblGender.Location = new System.Drawing.Point(29, 312);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(46, 14);
             this.lblGender.TabIndex = 16;
@@ -256,9 +247,9 @@
             this.cmbGender.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbGender.ItemHeight = 30;
-            this.cmbGender.Location = new System.Drawing.Point(54, 328);
+            this.cmbGender.Location = new System.Drawing.Point(29, 329);
             this.cmbGender.Name = "cmbGender";
-            this.cmbGender.Size = new System.Drawing.Size(247, 36);
+            this.cmbGender.Size = new System.Drawing.Size(213, 36);
             this.cmbGender.TabIndex = 18;
             // 
             // cmbPrecinct
@@ -273,9 +264,9 @@
             this.cmbPrecinct.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbPrecinct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbPrecinct.ItemHeight = 30;
-            this.cmbPrecinct.Location = new System.Drawing.Point(343, 328);
+            this.cmbPrecinct.Location = new System.Drawing.Point(284, 329);
             this.cmbPrecinct.Name = "cmbPrecinct";
-            this.cmbPrecinct.Size = new System.Drawing.Size(245, 36);
+            this.cmbPrecinct.Size = new System.Drawing.Size(220, 36);
             this.cmbPrecinct.TabIndex = 19;
             this.cmbPrecinct.SelectedIndexChanged += new System.EventHandler(this.cmbPrecinct_SelectedIndexChanged);
             // 
@@ -283,7 +274,7 @@
             // 
             this.lblPrecinct.AutoSize = true;
             this.lblPrecinct.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecinct.Location = new System.Drawing.Point(343, 311);
+            this.lblPrecinct.Location = new System.Drawing.Point(289, 312);
             this.lblPrecinct.Name = "lblPrecinct";
             this.lblPrecinct.Size = new System.Drawing.Size(51, 14);
             this.lblPrecinct.TabIndex = 20;
@@ -302,7 +293,7 @@
             this.btnSave.FillColor = System.Drawing.Color.Silver;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.Location = new System.Drawing.Point(189, 401);
+            this.btnSave.Location = new System.Drawing.Point(116, 402);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(280, 31);
             this.btnSave.TabIndex = 22;
@@ -310,10 +301,49 @@
             this.btnSave.UseTransparentBackground = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::Voters_System_C_.Properties.Resources.document;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 10);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(28, 34);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 3;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2ControlBox2
+            // 
+            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2.BorderRadius = 5;
+            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.Black;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(482, 0);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.Size = new System.Drawing.Size(28, 27);
+            this.guna2ControlBox2.TabIndex = 24;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.BorderRadius = 5;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.DarkRed;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(510, 0);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(28, 27);
+            this.guna2ControlBox1.TabIndex = 23;
+            // 
             // RegisterVoters
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(235)))), ((int)(((byte)(222)))));
+            this.Controls.Add(this.guna2ControlBox2);
+            this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblPrecinct);
             this.Controls.Add(this.cmbPrecinct);
@@ -333,7 +363,7 @@
             this.Controls.Add(this.guna2PictureBox1);
             this.Name = "RegisterVoters";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Size = new System.Drawing.Size(672, 466);
+            this.Size = new System.Drawing.Size(538, 466);
             this.Load += new System.EventHandler(this.RegisterVoters_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -360,5 +390,7 @@
         private Guna.UI2.WinForms.Guna2ComboBox cmbPrecinct;
         private System.Windows.Forms.Label lblPrecinct;
         private Guna.UI2.WinForms.Guna2Button btnSave;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }

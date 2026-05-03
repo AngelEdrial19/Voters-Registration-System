@@ -21,30 +21,14 @@ namespace Voters_System_C_
        
         private void addUserControl(UserControl uc)
         {
+            panelmain.Controls.Clear();
 
             uc.Dock = DockStyle.Fill;
             panelmain.Controls.Add(uc);
             uc.BringToFront();
         }
 
-        private void btn_Show_Click(object sender, EventArgs e)
-        {
-            btn_Show.Visible = false;
-            btn_Hide.Visible = true;
-            guna2Panel1.Visible = false;
-            guna2Panel1.Width = 183;
-            guna2Transition1.ShowSync(guna2Panel1);
-        }
-
-        private void btn_Hide_Click(object sender, EventArgs e)
-        {
-            //guna2PictureBox1.Visible = false;
-            guna2Panel1.Visible = false;
-            btn_Hide.Visible = false;
-            btn_Show.Visible = true;
-            guna2Panel1.Width = 52;
-            guna2Transition1.ShowSync(guna2Panel1);
-        }
+        
 
         private void btnHome_Click(object sender, EventArgs e)
         {
@@ -66,10 +50,28 @@ namespace Voters_System_C_
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to log out?",
+                "Confirm Logout",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                // 🔥 balik sa login form
+                Login loginForm = new Login();
+                loginForm.Show();
+
+                this.Hide(); // or this.Close();
+            }
         }
 
-        
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            addUserControl(new Home());
+        }
     }
     
     

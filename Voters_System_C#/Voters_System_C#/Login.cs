@@ -58,5 +58,17 @@ namespace Voters_System_C_
             new Signup().Show();
             this.Hide();
         }
+
+        private void chkShowPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkShowPass.Checked)
+            {
+                txtPassword.UseSystemPasswordChar = false; // 🔓 show password
+            }
+            else
+            {
+                txtPassword.UseSystemPasswordChar = true; // 🔒 hide password
+            }
+        }
     }
 }
